@@ -73,8 +73,8 @@ void delayWrite(delay_t *delay, tick_t duration);
  * @param  duration: Timeout value
  */
 void delayInit(delay_t *delay, tick_t duration) {
-	//Timeout validation
-	if (duration < 0) {
+	//Timeout and pointer validation
+	if (delay == 0 || duration < 0) {
 		Error_Handler();
 	}
 
@@ -91,6 +91,11 @@ void delayInit(delay_t *delay, tick_t duration) {
  * 		duration time has elapsed
  */
 bool_t delayRead(delay_t *delay) {
+	//Pointer validation
+	if (delay == 0) {
+		Error_Handler();
+	}
+
 	if (!delay->running) {
 		delay->startTime = HAL_GetTick();
 		delay->running = true;
@@ -111,8 +116,8 @@ bool_t delayRead(delay_t *delay) {
  * @param  duration: Timeout value
  */
 void delayWrite(delay_t *delay, tick_t duration) {
-	//Timeout validation
-	if (duration < 0) {
+	//Timeout and pointer validation
+	if (delay == 0 || duration < 0) {
 		Error_Handler();
 	}
 
