@@ -92,7 +92,7 @@ int main(void) {
 		if (delayRead(&delayHandler)) {
 			BSP_LED_On(sequence[ledIndex]);
 
-			if (ledIndex <= 0) {
+			if (ledIndex == 0) {
 				previousLedIndex = LED_COUNT - 1;
 			} else {
 				previousLedIndex = ledIndex - 1;
@@ -100,11 +100,7 @@ int main(void) {
 
 			BSP_LED_Off(sequence[previousLedIndex]);
 
-			if (ledIndex >= LED_COUNT - 1) {
-				ledIndex = 0;
-			} else {
-				ledIndex++;
-			}
+			ledIndex = (ledIndex + 1)%LED_COUNT;
 		}
 	}
 }
