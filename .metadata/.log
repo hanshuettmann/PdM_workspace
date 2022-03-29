@@ -3834,3 +3834,39 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-03-20 22:14:23.062
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-03-26 10:04:44.024 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-03-26 10:06:46.491
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-03-26 10:06:46.570
+!MESSAGE Log4j initialized with config file C:\Hans\UBA\Prog uC\PdM_workspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-03-26 10:06:57.250
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-26 11:09:26.191
+!MESSAGE Indexed 'Practica 4' (100 sources, 210 headers) in 12.8 sec: 29,844 declarations; 90,754 references; 8 unresolved inclusions; 1,836 syntax errors; 1,829 unresolved names (1.5%)
+!SESSION 2022-03-29 09:22:00.395 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-03-29 09:22:16.912
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-03-29 09:22:16.974
+!MESSAGE Log4j initialized with config file C:\Hans\UBA\Prog uC\PdM_workspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-03-29 09:22:37.043
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-29 09:37:03.885
+!MESSAGE Indexed 'Practica 4.2' (100 sources, 210 headers) in 12.3 sec: 29,863 declarations; 90,786 references; 8 unresolved inclusions; 1,836 syntax errors; 1,829 unresolved names (1.5%)
