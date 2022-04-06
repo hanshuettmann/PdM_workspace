@@ -1,4 +1,4 @@
-11:50:27 **** Incremental Build of configuration Debug for project Ejercicio_delayNB_1 ****
+11:34:23 **** Incremental Build of configuration Debug for project Ejercicio_delayNB_1 ****
 make -j12 all 
 arm-none-eabi-size   Ejercicio_delayNB_1.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   Ejercicio_delayNB_1.elf
 Finished building: default.size.stdout
  
 
-11:50:27 Build Finished. 0 errors, 0 warnings. (took 495ms)
+11:34:23 Build Finished. 0 errors, 0 warnings. (took 507ms)
 

@@ -71,9 +71,6 @@ int main(void) {
 	/* Configure the system clock to 180 MHz */
 	SystemClock_Config();
 
-	/* Initialize User Button */
-	BSP_PB_Init(BUTTON_USER, BUTTON_MODE_GPIO);
-
 	/* Initialize BSP Leds */
 	BSP_LED_Init(LED1);
 	BSP_LED_Init(LED2);
