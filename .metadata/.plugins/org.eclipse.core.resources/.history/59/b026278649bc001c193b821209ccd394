@@ -1,0 +1,75 @@
+/**
+ ******************************************************************************
+ * @file    Drivers/API/Src/API_Uart.c
+ * @author  Patricio Hans Hüttmann
+ * @brief   This file provides firmware functions to manage UART peripheral
+ */
+/* Includes ------------------------------------------------------------------*/
+#include <API_SPI.h>
+#include <API_Uart.h>
+#include <stdio.h>
+
+/* SPI handler declaration */
+static SPI_HandleTypeDef hspi;
+
+/* Private function prototypes -----------------------------------------------*/
+
+/**
+ * @brief  Initialize SPI peripheral
+ * @param  none
+ * @retval bool Init process status
+ */
+bool_t spiInit(void) {
+
+	/*##-1- Configure the SPI peripheral ######################################*/
+	hspi.Instance = SPI1;
+
+	hspi.Init.Mode = SPI_MODE_MASTER;
+	hspi.Init.Direction = SPI_DIRECTION_2LINES;
+	hspi.Init.DataSize = SPI_DATASIZE_8BIT;
+	hspi.Init.CLKPolarity = SPI_POLARITY_HIGH; //CPOL = 0
+	hspi.Init.CLKPhase = SPI_PHASE_2EDGE; //CPHA = 1
+	//hspi.Init.CLKPhase = SPI_PHASE_2EDGE; //CPHA = 1
+	hspi.Init.FirstBit = SPI_FIRSTBIT_MSB;
+	hspi.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
+	hspi.Init.NSS = SPI_NSS_SOFT;
+
+	HAL_GPIO_WritePin(SPIx_NSS_SOFT_GPIO_PORT, SPIx_NSS_SOFT_PIN, GPIO_PIN_SET);
+
+	/* Init peripheral */
+	if (HAL_SPI_Init(&hspi) != HAL_OK) {
+		/* Initialization Error */
+		return false;
+	}
+
+	uint8_t pSend = 0xC0;
+	char pData[50];
+
+	char data[50];
+
+	HAL_GPIO_WritePin(SPIx_NSS_SOFT_GPIO_PORT, SPIx_NSS_SOFT_PIN,
+			GPIO_PIN_RESET);
+
+	if (HAL_SPI_Transmit(&hspi, (uint8_t*) pSend, 1, HAL_MAX_DELAY) != HAL_OK)
+		return false;
+	if (HAL_SPI_Receive(&hspi, (uint8_t*) pData, 1, HAL_MAX_DELAY) != HAL_OK)
+		return false;
+
+	HAL_GPIO_WritePin(SPIx_NSS_SOFT_GPIO_PORT, SPIx_NSS_SOFT_PIN, GPIO_PIN_SET);
+
+	uartSendString((uint8_t*) "SPI finalizado\r\n");
+	sprintf(data, "dato enviado: %u\r\n", pSend);
+	uartSendString((uint8_t*) data);
+
+	pSend = pData[0];
+
+	sprintf(data, "primer recibido: %u\r\n", pSend);
+	uartSendString((uint8_t*) data);
+
+	pSend = pData[1];
+
+	sprintf(data, "primer recibido: %u\r\n", pSend);
+	uartSendString((uint8_t*) data);
+
+	return true;
+}

@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Init"/>
+		<item key="selection" value="HAL_SPI_Trans"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="HAL_SPI_Trans"/>
+			<item value="HAL_SPI_Transmit("/>
+			<item value="Transmit"/>
+			<item value="HAL_SPI_Init("/>
+			<item value="HAL_SPI_Init()"/>
+			<item value="HAL_SPI_Init"/>
+			<item value="HAL_SPI"/>
+			<item value="HAL_SPI  "/>
+			<item value="HAL_UART_MspInit()"/>
+			<item value="USARTx_TX_PIN"/>
 			<item value="init"/>
 			<item value="BSP_"/>
 		</list>
