@@ -21,15 +21,6 @@
 #include <stdio.h>
 #include <string.h>
 
-/* Definition for USARTx settings */
-#define UART_BAUDRATE 9600
-#define UART_WORDLENGTH UART_WORDLENGTH_8B
-#define UART_STOPBITS UART_STOPBITS_1
-#define UART_PARITY UART_PARITY_ODD
-#define UART_FLOWCONTROL UART_HWCONTROL_NONE
-#define UART_MODE UART_MODE_TX_RX
-#define UART_OVERSAMPLING UART_OVERSAMPLING_16
-
 /* Settings messages */
 static const char *UART_BAUDRATE_MSG = "Baudrate: 9600\n\r";
 static const char *UART_WORDLENGTH_MSG = "Wordlength: 8 bits\n\r";
@@ -55,13 +46,13 @@ bool_t uartInit(void) {
 	/* Put the USART peripheral in the Asynchronous mode (UART Mode) */
 	UartHandle.Instance = USARTx;
 
-	UartHandle.Init.BaudRate = UART_BAUDRATE;
-	UartHandle.Init.WordLength = UART_WORDLENGTH;
-	UartHandle.Init.StopBits = UART_STOPBITS;
-	UartHandle.Init.Parity = UART_PARITY;
-	UartHandle.Init.HwFlowCtl = UART_FLOWCONTROL;
-	UartHandle.Init.Mode = UART_MODE;
-	UartHandle.Init.OverSampling = UART_OVERSAMPLING;
+	UartHandle.Init.BaudRate = 9600;
+	UartHandle.Init.WordLength = UART_WORDLENGTH_8B;
+	UartHandle.Init.StopBits = UART_STOPBITS_1;
+	UartHandle.Init.Parity = UART_PARITY_ODD;
+	UartHandle.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+	UartHandle.Init.Mode = UART_MODE_TX_RX;
+	UartHandle.Init.OverSampling = UART_OVERSAMPLING_16;
 
 	/* Init peripheral */
 	if (HAL_UART_Init(&UartHandle) != HAL_OK) {
@@ -124,7 +115,7 @@ void uartReceiveStringSize(uint8_t *pstring, uint16_t size) {
 		return;
 	}
 
-	/* Send pstring to the console */
+	/* Receive pstring from the serial port */
 	HAL_UART_Receive(&UartHandle, (uint8_t*) pstring, size, HAL_MAX_DELAY);
 }
 

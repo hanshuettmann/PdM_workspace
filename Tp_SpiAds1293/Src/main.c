@@ -63,19 +63,29 @@ int main(void) {
 		Error_Handler();
 	}
 
-	static const char *INIT_MSG =
-			"Welcome to ADS1293 SPI communication test:\n\r";
-	uartSendString((uint8_t*) INIT_MSG);
-
 	if (!spiInit()) {
 		Error_Handler();
 	}
 
+	uint8_t ptxData = 0xA1;
+	uint8_t prxData = 0;
+
+	/* Read ID register */
+	setNSS(GPIO_PIN_RESET);
+	spiSendData(&ptxData, 1);
+	spiReceiveData(&prxData, 1);
+	setNSS(GPIO_PIN_SET);
+
 	/* Infinite loop */
 	while (1) {
-		/* Rising and Falling messages will be sent from API_Debounce.c in order to detect the flanks*/
 		/* Handle button states */
 		debounceFSM_update();
+//		if (readKey()) {
+//			setNSS(GPIO_PIN_RESET);
+//			spiSendData(&ptxSend, 1);
+//			spiReceiveData(&prxData, 1);
+//			setNSS(GPIO_PIN_SET);
+//		}
 	}
 }
 

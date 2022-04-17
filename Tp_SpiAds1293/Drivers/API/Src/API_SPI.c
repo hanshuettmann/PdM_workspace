@@ -2,7 +2,7 @@
  ******************************************************************************
  * @file    Drivers/API/Src/API_Uart.c
  * @author  Patricio Hans Hüttmann
- * @brief   This file provides firmware functions to manage UART peripheral
+ * @brief   This file provides firmware functions to manage SPI peripheral
  */
 /* Includes ------------------------------------------------------------------*/
 #include <API_SPI.h>
@@ -33,28 +33,50 @@ bool_t spiInit(void) {
 	hspi.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
 	hspi.Init.NSS = SPI_NSS_SOFT;
 
-	HAL_GPIO_WritePin(SPIx_NSS_SOFT_GPIO_PORT, SPIx_NSS_SOFT_PIN, GPIO_PIN_SET);
-
 	/* Init peripheral */
 	if (HAL_SPI_Init(&hspi) != HAL_OK) {
 		/* Initialization Error */
 		return false;
 	}
 
-	const uint8_t pSend = 0xA1;
-	char pData[20];
-
-	HAL_GPIO_WritePin(SPIx_NSS_SOFT_GPIO_PORT, SPIx_NSS_SOFT_PIN,
-			GPIO_PIN_RESET);
-
-	if (HAL_SPI_Transmit(&hspi, (uint8_t*) &pSend, 1, HAL_MAX_DELAY) != HAL_OK)
-		return false;
-	if (HAL_SPI_Receive(&hspi, (uint8_t*) pData, 1, HAL_MAX_DELAY) != HAL_OK)
-		return false;
-
-	HAL_GPIO_WritePin(SPIx_NSS_SOFT_GPIO_PORT, SPIx_NSS_SOFT_PIN, GPIO_PIN_SET);
-
-	uartSendString((uint8_t*) "SPI finalizado\r\n");
-
 	return true;
+}
+
+/**
+ * @brief  Send data through the SPI MOSI line
+ * @param  ptxData pointer to the uint8_t buffer to be sent
+ * @param  size amount of data to be sent
+ * @retval none
+ */
+void spiSendData(uint8_t *ptxData, uint16_t size) {
+	/* Validate ptxData and size parameters */
+	if (ptxData == NULL || size <= 0) {
+		return;
+	}
+
+	HAL_SPI_Transmit(&hspi, ptxData, size, HAL_MAX_DELAY);
+}
+
+/**
+ * @brief  Receive data from the SPI MISO line
+ * @param  ptxData pointer to the uint8_t buffer to be sent
+ * @param  size amount of data to be sent
+ * @retval none
+ */
+void spiReceiveData(uint8_t *prxData, uint16_t size) {
+	/* Validate ptxData and size parameters */
+	if (prxData == NULL || size <= 0) {
+		return;
+	}
+
+	HAL_SPI_Receive(&hspi, prxData, size, HAL_MAX_DELAY);
+}
+
+/**
+ * @brief  Handle NSS line by software
+ * @param  state set line to high or low
+ * @retval none
+ */
+void setNSS(GPIO_PinState state) {
+	HAL_GPIO_WritePin(SPIx_NSS_SOFT_GPIO_PORT, SPIx_NSS_SOFT_PIN, state);
 }
