@@ -63,18 +63,14 @@ int main(void) {
 		Error_Handler();
 	}
 
-	if (!spiInit()) {
-		Error_Handler();
-	}
+//	if (!spiInit()) {
+//		Error_Handler();
+//	}
 
 	uint8_t ptxData = 0xA1;
 	uint8_t prxData = 0;
 
-	/* Read ID register */
-	setNSS(GPIO_PIN_RESET);
-	spiSendData(&ptxData, 1);
-	spiReceiveData(&prxData, 1);
-	setNSS(GPIO_PIN_SET);
+	testing(&ptxData, &prxData);
 
 	/* Infinite loop */
 	while (1) {
