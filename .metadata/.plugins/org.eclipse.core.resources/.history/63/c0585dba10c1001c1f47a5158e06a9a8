@@ -1,0 +1,21 @@
+/*
+ * API_ADS1293.h
+ *
+ *  Created on: Apr 20, 2022
+ *      Author: Patricio Hans Hüttmann
+ */
+/* Includes ------------------------------------------------------------------*/
+#include <stdbool.h>
+
+#ifndef API_INC_API_ADS1293_H_
+#define API_INC_API_ADS1293_H_
+
+typedef bool bool_t;
+
+/* Public function prototypes ------------------------------------------------*/
+bool_t ads1293Init(void);
+void ads1293ReadRegister(uint8_t *prxData, uint8_t *prxData, uint16_t size);
+void ads1293ReadID(uint8_t *prxData, uint16_t size);
+
+#endif /* API_INC_API_ADS1293_H_ */
+/*****************************END OF FILE**************************************/

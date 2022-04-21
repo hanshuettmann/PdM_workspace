@@ -1,0 +1,36 @@
+/**
+ ******************************************************************************
+ * @file    Drivers/API/Src/API_ADS1293.c
+ * @author  Patricio Hans Hüttmann
+ * @brief   This file provides firmware functions to manage ADS1293 device
+ */
+/* Includes ------------------------------------------------------------------*/
+#include <API_SPI.h>
+#include <stdio.h>
+
+/**
+ * @brief  Initialize ADS1293 device
+ * @param  none
+ * @retval bool Init process status
+ */
+bool_t ads1293Init(void) {
+	/* Init SPI peripheral */
+	if (!spiInit(0)) {
+		return false;
+	}
+	return true;
+}
+
+/**
+ * @brief  Read ADS1293 ID register
+ * @param  none
+ * @retval uint8_t ID value
+ */
+uint8_t ads1293ReadID(void) {
+	uint8_t prxData = REVID;
+
+	setNSS(GPIO_PIN_RESET);
+	spiSendData(&ptxData, 1);
+	spiReceiveData(&prxData, 1);
+	setNSS(GPIO_PIN_SET);
+}

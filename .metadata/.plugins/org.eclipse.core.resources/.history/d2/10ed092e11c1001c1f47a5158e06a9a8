@@ -1,0 +1,9 @@
+/**
+ ******************************************************************************
+ * @file    Drivers/API/Src/API_ADS1293.c
+ * @author  Patricio Hans Hüttmann
+ * @brief   This file provides firmware functions to manage ADS1293 device
+ */
+/* Includes ------------------------------------------------------------------*/
+#include <API_SPI.h>
+#include <stdio.h>

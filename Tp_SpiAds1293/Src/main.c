@@ -11,11 +11,11 @@
 #include "main.h"
 #include "API_Debounce.h"
 #include "API_Uart.h"
-#include "API_SPI.h"
+#include "API_ADS1293.h"
 
 /* Private typedef -----------------------------------------------------------*/
 typedef enum {
-	INIT, WAIT, READ
+	INIT, WAIT
 } state_t;
 
 /* Private global variables --------------------------------------------------*/
@@ -63,30 +63,20 @@ int main(void) {
 		Error_Handler();
 	}
 
-	uint8_t ptxData = 0xA1;
-	uint8_t prxData = 0;
-
-	if (!spiInit(0)) {
+	/* Initialize ADS1293 device */
+	if (!ads1293Init(0)) {
 		Error_Handler();
 	}
+
+	/* ID data buffer */
+	static uint8_t idData = 0;
 
 	/* Infinite loop */
 	while (1) {
 		/* Handle button states */
 		debounceFSM_update();
 		if (readKey()) {
-			ptxData = 0xA1;
-//			testing(&ptxData, &prxData);
-			setNSS(GPIO_PIN_RESET);
-			spiSendData(&ptxData, 1);
-			spiReceiveData(&prxData, 1);
-			setNSS(GPIO_PIN_SET);
-			ptxData = 0xC0;
-//			testing(&ptxData, &prxData);
-			setNSS(GPIO_PIN_RESET);
-			spiSendData(&ptxData, 1);
-			spiReceiveData(&prxData, 1);
-			setNSS(GPIO_PIN_SET);
+			ads1293ReadID(&idData);
 		}
 	}
 }

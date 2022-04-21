@@ -5,18 +5,21 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Drivers/API/Src/API_ADS1293.c \
 ../Drivers/API/Src/API_Debounce.c \
 ../Drivers/API/Src/API_Delay.c \
 ../Drivers/API/Src/API_SPI.c \
 ../Drivers/API/Src/API_Uart.c 
 
 OBJS += \
+./Drivers/API/Src/API_ADS1293.o \
 ./Drivers/API/Src/API_Debounce.o \
 ./Drivers/API/Src/API_Delay.o \
 ./Drivers/API/Src/API_SPI.o \
 ./Drivers/API/Src/API_Uart.o 
 
 C_DEPS += \
+./Drivers/API/Src/API_ADS1293.d \
 ./Drivers/API/Src/API_Debounce.d \
 ./Drivers/API/Src/API_Delay.d \
 ./Drivers/API/Src/API_SPI.d \
@@ -30,7 +33,7 @@ Drivers/API/Src/%.o: ../Drivers/API/Src/%.c Drivers/API/Src/subdir.mk
 clean: clean-Drivers-2f-API-2f-Src
 
 clean-Drivers-2f-API-2f-Src:
-	-$(RM) ./Drivers/API/Src/API_Debounce.d ./Drivers/API/Src/API_Debounce.o ./Drivers/API/Src/API_Delay.d ./Drivers/API/Src/API_Delay.o ./Drivers/API/Src/API_SPI.d ./Drivers/API/Src/API_SPI.o ./Drivers/API/Src/API_Uart.d ./Drivers/API/Src/API_Uart.o
+	-$(RM) ./Drivers/API/Src/API_ADS1293.d ./Drivers/API/Src/API_ADS1293.o ./Drivers/API/Src/API_Debounce.d ./Drivers/API/Src/API_Debounce.o ./Drivers/API/Src/API_Delay.d ./Drivers/API/Src/API_Delay.o ./Drivers/API/Src/API_SPI.d ./Drivers/API/Src/API_SPI.o ./Drivers/API/Src/API_Uart.d ./Drivers/API/Src/API_Uart.o
 
 .PHONY: clean-Drivers-2f-API-2f-Src
 

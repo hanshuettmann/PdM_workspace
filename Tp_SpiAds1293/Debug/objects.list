@@ -1,3 +1,4 @@
+"./Drivers/API/Src/API_ADS1293.o"
 "./Drivers/API/Src/API_Debounce.o"
 "./Drivers/API/Src/API_Delay.o"
 "./Drivers/API/Src/API_SPI.o"

@@ -22,6 +22,7 @@
 #include <string.h>
 
 /* Settings messages */
+static const char *UART_WELCOME_MSG = "<!-- Starting UART port -->";
 static const char *UART_BAUDRATE_MSG = "Baudrate: 9600\n\r";
 static const char *UART_WORDLENGTH_MSG = "Wordlength: 8 bits\n\r";
 static const char *UART_STOPBITS_MSG = "Stop bits: 1 bit\n\r";
@@ -59,6 +60,7 @@ bool_t uartInit(void) {
 		/* Initialization Error */
 		return false;
 	} else {
+		uartSendString((uint8_t*) UART_WELCOME_MSG);
 		uartSendString((uint8_t*) UART_BAUDRATE_MSG);
 		uartSendString((uint8_t*) UART_WORDLENGTH_MSG);
 		uartSendString((uint8_t*) UART_STOPBITS_MSG);

@@ -16,10 +16,10 @@ static SPI_HandleTypeDef hspi;
 
 /**
  * @brief  Initialize SPI peripheral
- * @param  none set this value to 0
+ * @param  dummy set this value to 0
  * @retval bool Init process status
  */
-bool_t spiInit(uint8_t none) {
+bool_t spiInit(uint8_t dummy) {
 	/*##-1- Configure the SPI peripheral ######################################*/
 	hspi.Instance = SPI1;
 
@@ -57,7 +57,7 @@ void spiSendData(uint8_t *ptxData, uint16_t size) {
 
 /**
  * @brief  Receive data from the SPI MISO line
- * @param  ptxData pointer to the uint8_t buffer to be sent
+ * @param  prxData pointer to the uint8_t buffer
  * @param  size amount of data to be sent
  * @retval none
  */
