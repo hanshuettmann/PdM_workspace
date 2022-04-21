@@ -12,6 +12,8 @@
 
 typedef bool bool_t;
 
+/* ADS1293 Registers map -----------------------------------------------------*/
+
 #define WREG 0x7f
 #define RREG 0x80
 

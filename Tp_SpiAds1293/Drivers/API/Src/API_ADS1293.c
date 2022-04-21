@@ -60,7 +60,8 @@ void ads1293ReadRegister(uint8_t *ptxData, uint8_t *prxData, uint16_t size) {
 		return;
 	}
 
-	/* Set read command in register address */
+	/* ADS1293 sensor uses 7bit register addresses. MSB in ptxData indicates if the register is being
+	 * read or write. Set MSB to 1 will read the register value */
 	uint8_t readAddress = *ptxData | RREG;
 
 	/* Set ADS1293 CS to LOW to start communication */
