@@ -63,25 +63,31 @@ int main(void) {
 		Error_Handler();
 	}
 
-//	if (!spiInit()) {
-//		Error_Handler();
-//	}
-
 	uint8_t ptxData = 0xA1;
 	uint8_t prxData = 0;
 
-	testing(&ptxData, &prxData);
+	if (!spiInit(0)) {
+		Error_Handler();
+	}
 
 	/* Infinite loop */
 	while (1) {
 		/* Handle button states */
 		debounceFSM_update();
-//		if (readKey()) {
-//			setNSS(GPIO_PIN_RESET);
-//			spiSendData(&ptxSend, 1);
-//			spiReceiveData(&prxData, 1);
-//			setNSS(GPIO_PIN_SET);
-//		}
+		if (readKey()) {
+			ptxData = 0xA1;
+//			testing(&ptxData, &prxData);
+			setNSS(GPIO_PIN_RESET);
+			spiSendData(&ptxData, 1);
+			spiReceiveData(&prxData, 1);
+			setNSS(GPIO_PIN_SET);
+			ptxData = 0xC0;
+//			testing(&ptxData, &prxData);
+			setNSS(GPIO_PIN_RESET);
+			spiSendData(&ptxData, 1);
+			spiReceiveData(&prxData, 1);
+			setNSS(GPIO_PIN_SET);
+		}
 	}
 }
 

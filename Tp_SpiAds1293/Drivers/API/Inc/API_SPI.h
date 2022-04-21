@@ -52,12 +52,10 @@ typedef bool bool_t;
 #define SPIx_NSS_AF                      GPIO_AF5_SPI1
 
 /* Public function prototypes ------------------------------------------------*/
-bool_t spiInit(void);
+bool_t spiInit(uint8_t none);
 void spiSendData(uint8_t *ptxData, uint16_t size);
 void spiReceiveData(uint8_t *prxData, uint16_t size);
 void setNSS(GPIO_PinState state);
-
-void testing(uint8_t *ptxData, uint8_t *prxData);
 
 #endif /* API_INC_API_SPI_H_ */
 

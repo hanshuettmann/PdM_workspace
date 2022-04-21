@@ -14,41 +14,12 @@ static SPI_HandleTypeDef hspi;
 
 /* Private function prototypes -----------------------------------------------*/
 
-void testing(uint8_t *ptxData, uint8_t *prxData) {
-	/*##-1- Configure the SPI peripheral ######################################*/
-	hspi.Instance = SPI1;
-
-	hspi.Init.Mode = SPI_MODE_MASTER;
-	hspi.Init.Direction = SPI_DIRECTION_2LINES;
-	hspi.Init.DataSize = SPI_DATASIZE_8BIT;
-	hspi.Init.CLKPolarity = SPI_POLARITY_LOW; //CPOL = 0
-	hspi.Init.CLKPhase = SPI_PHASE_2EDGE; //CPHA = 1
-	hspi.Init.FirstBit = SPI_FIRSTBIT_MSB;
-	hspi.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
-	hspi.Init.NSS = SPI_NSS_SOFT;
-
-	/* Init peripheral */
-	if (HAL_SPI_Init(&hspi) != HAL_OK) {
-		/* Initialization Error */
-		while (1)
-			;
-	}
-
-	/* Read ID register */
-	setNSS(GPIO_PIN_RESET);
-	spiSendData(ptxData, 1);
-	spiReceiveData(prxData, 1);
-	setNSS(GPIO_PIN_SET);
-
-}
-
 /**
  * @brief  Initialize SPI peripheral
- * @param  none
+ * @param  none set this value to 0
  * @retval bool Init process status
  */
-bool_t spiInit(void) {
-
+bool_t spiInit(uint8_t none) {
 	/*##-1- Configure the SPI peripheral ######################################*/
 	hspi.Instance = SPI1;
 
@@ -66,7 +37,6 @@ bool_t spiInit(void) {
 		/* Initialization Error */
 		return false;
 	}
-
 	return true;
 }
 
