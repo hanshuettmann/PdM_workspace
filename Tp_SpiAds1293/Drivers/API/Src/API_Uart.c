@@ -22,14 +22,14 @@
 #include <string.h>
 
 /* Settings messages */
-static const char *UART_WELCOME_MSG = "<!-- Starting UART port -->";
+static const char *UART_WELCOME_MSG = "<!-- Starting UART port -->\n\r";
 static const char *UART_BAUDRATE_MSG = "Baudrate: 9600\n\r";
 static const char *UART_WORDLENGTH_MSG = "Wordlength: 8 bits\n\r";
 static const char *UART_STOPBITS_MSG = "Stop bits: 1 bit\n\r";
 static const char *UART_PARITY_MSG = "Parity: Odd\n\r";
 static const char *UART_FLOWCONTROL_MSG = "HW Flow Control: None\n\r";
 static const char *UART_MODE_MSG = "Mode: TX_RX\n\r";
-static const char *UART_OVERSAMPLING_MSG = "Oversampling: 16\n\r";
+static const char *UART_OVERSAMPLING_MSG = "Oversampling: 16\n\n\r";
 
 /* UART handler declaration */
 static UART_HandleTypeDef UartHandle;

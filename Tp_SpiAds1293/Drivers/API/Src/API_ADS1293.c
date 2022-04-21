@@ -22,7 +22,7 @@ bool_t ads1293Init(uint8_t dummy) {
 		return false;
 	}
 
-	/* Set device CS to HIGH*/
+	/* Set device CS to HIGH */
 	setNSS(GPIO_PIN_SET);
 
 	return true;

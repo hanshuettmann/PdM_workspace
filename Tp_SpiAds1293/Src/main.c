@@ -53,12 +53,11 @@ int main(void) {
 
 	/* Initialize BSP Led for LED2 and LED3*/
 	BSP_LED_Init(LED2);
-	BSP_LED_Init(LED3);
 
 	/* Initialize Debounce MEF */
 	debounceFSM_init();
 
-	/* Initialize UART */
+	/* Initialize UART port */
 	if (!uartInit()) {
 		Error_Handler();
 	}
@@ -71,12 +70,37 @@ int main(void) {
 	/* ID data buffer */
 	static uint8_t idData = 0;
 
+	/* Init FSM current state */
+	static state_t currentState = INIT;
+
+	/* ID buffer string */
+	static char idMessage[50];
+
 	/* Infinite loop */
 	while (1) {
 		/* Handle button states */
 		debounceFSM_update();
-		if (readKey()) {
-			ads1293ReadID(&idData);
+
+		/* FSM state handler */
+		switch (currentState) {
+		case INIT:
+			if (readKey()) {
+				uartSendString((uint8_t*) "State: WAITING INPUT\r\n");
+				uartSendString((uint8_t*) "Press button to read\r\n\n");
+				currentState = WAIT;
+			}
+			break;
+		case WAIT:
+			if (readKey()) {
+				ads1293ReadID(&idData);
+				sprintf(idMessage, "ADS1293 ID: 0x%x\r\n", idData);
+				uartSendString((uint8_t*) idMessage);
+				currentState = WAIT;
+			}
+			break;
+		default:
+			currentState = INIT;
+			break;
 		}
 	}
 }
