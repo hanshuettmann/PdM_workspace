@@ -98,8 +98,13 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef *hspi) {
 	SPIx_NSS_GPIO_CLK_ENABLE();
 	SPIx_NSS_SOFT_GPIO_CLK_ENABLE();
 
-
 	/*##-2- Configure peripheral GPIO ##########################################*/
+	/*Configure GPIO pin : ADS1293_DRDB_Pin */
+	GPIO_InitStruct.Pin = GPIO_PIN_15;
+	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	GPIO_InitStruct.Pull = GPIO_PULLUP;
+	HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+
 	/* SPI SCK GPIO pin configuration  */
 	GPIO_InitStruct.Pin = SPIx_SCK_PIN;
 	GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;

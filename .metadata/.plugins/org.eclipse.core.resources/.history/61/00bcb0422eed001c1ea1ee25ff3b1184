@@ -1,0 +1,108 @@
+/**
+ ******************************************************************************
+ * @file    Drivers/API/Src/API_ADS1293.c
+ * @author  Patricio Hans Hüttmann
+ * @brief   This file provides firmware functions to manage ADS1293 device
+ */
+/* Includes ------------------------------------------------------------------*/
+#include <API_SPI.h>
+#include <stdio.h>
+#include <API_ADS1293.h>
+
+#define REG_ID_SIZE 1
+
+/**
+ * @brief  Initialize ADS1293 device
+ * @param  dummy set this value to 0
+ * @retval bool Init process status
+ */
+bool_t ads1293Init(uint8_t dummy) {
+	/* Init SPI peripheral */
+	if (!spiInit(0)) {
+		return false;
+	}
+
+	/* Set device CS to HIGH */
+	setNSS(GPIO_PIN_SET);
+
+	return true;
+}
+
+/**
+ * @brief  Read ADS1293 ID register
+ * @param  pidData pointer to the uint8_t buffer
+ * @retval uint8_t ID value
+ */
+void ads1293ReadID(uint8_t *pidData) {
+
+	uint8_t ptxData = REVID | RREG;
+
+	/* Validate *pidData */
+	if (pidData == NULL) {
+		return;
+	}
+
+	/* Read register and get sensor ID into pidData */
+	ads1293ReadRegister(&ptxData, pidData, REG_ID_SIZE);
+
+}
+
+/**
+ * @brief  Read register from *ptxData address
+ * @param  ptxData pointer to the uint8_t buffer to be sent with the register address
+ * @param  prxData pointer to the uint8_t buffer to store the register value
+ * @param  size size amount of data to be sent
+ * @retval none
+ */
+void ads1293ReadRegister(uint8_t *ptxData, uint8_t *prxData, uint16_t size) {
+	/* Validate *ptxData, *prxData and size parameters */
+	if (ptxData == NULL || prxData == NULL || size <= 0) {
+		return;
+	}
+
+	/* ADS1293 sensor uses 7bit register addresses. MSB in ptxData indicates if the register is being
+	 * read or write. Set MSB to 1 will read the register value */
+	uint8_t readAddress = *ptxData | RREG;
+
+	/* Set ADS1293 CS to LOW to start communication */
+	setNSS(GPIO_PIN_RESET);
+
+	/* Send register address with the read command over SPI protocol */
+	spiSendData(&readAddress, REG_ID_SIZE);
+
+	/* Read register and load value into *prxData */
+	spiReceiveData(prxData, REG_ID_SIZE);
+
+	/* Set ADS1293 CS to HIGH to finish communication */
+	setNSS(GPIO_PIN_SET);
+}
+
+/**
+ * @brief  Read register from *ptxData address
+ * @param  ptxData pointer to the uint8_t buffer to be sent with the register address
+ * @param  prxData pointer to the uint8_t buffer to store the register value
+ * @param  size size amount of data to be sent
+ * @retval none
+ */
+void ads1293WriteRegister(uint8_t *ptxData, uint8_t *prxData, uint16_t size) {
+	/* Validate *ptxData, *prxData and size parameters */
+	if (ptxData == NULL || prxData == NULL || size <= 0) {
+		return;
+	}
+
+	/* ADS1293 sensor uses 7bit register addresses. MSB in ptxData indicates if the register is being
+	 * read or write. Set MSB to 1 will read the register value */
+	uint8_t writeAddress = *ptxData | WREG;
+
+	/* Set ADS1293 CS to LOW to start communication */
+	setNSS(GPIO_PIN_RESET);
+
+	/* Send register address with the read command over SPI protocol */
+	spiSendData(&readAddress, REG_ID_SIZE);
+
+	/* Read register and load value into *prxData */
+	spiReceiveData(prxData, REG_ID_SIZE);
+
+	/* Set ADS1293 CS to HIGH to finish communication */
+	setNSS(GPIO_PIN_SET);
+}

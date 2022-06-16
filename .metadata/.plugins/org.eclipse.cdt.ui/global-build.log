@@ -1,4 +1,18 @@
-00:32:53 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
+09:07:35 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
+make -j12 all 
+arm-none-eabi-size   Tp_SpiAds1293.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13732	     68	   1732	  15532	   3cac	Tp_SpiAds1293.elf
+Finished building: default.size.stdout
+ 
+09:08:04 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
+make -j12 all 
+arm-none-eabi-size   Tp_SpiAds1293.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13732	     68	   1732	  15532	   3cac	Tp_SpiAds1293.elf
+Finished building: default.size.stdout
+ 
+09:11:32 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/Core/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc -o "Tp_SpiAds1293.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Hans\UBA\Prog uC\PdM_workspace\Tp_SpiAds1293\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_SpiAds1293.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -6,40 +20,13 @@ Finished building target: Tp_SpiAds1293.elf
  
 arm-none-eabi-size   Tp_SpiAds1293.elf 
 arm-none-eabi-objdump -h -S  Tp_SpiAds1293.elf  > "Tp_SpiAds1293.list"
-arm-none-eabi-objcopy  -O binary  Tp_SpiAds1293.elf  "Tp_SpiAds1293.bin"
    text	   data	    bss	    dec	    hex	filename
-  13708	     68	   1748	  15524	   3ca4	Tp_SpiAds1293.elf
+  13764	     68	   1732	  15564	   3ccc	Tp_SpiAds1293.elf
 Finished building: default.size.stdout
- 
-Finished building: Tp_SpiAds1293.bin
  
 Finished building: Tp_SpiAds1293.list
  
-00:33:12 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
-make -j12 all 
-arm-none-eabi-size   Tp_SpiAds1293.elf 
-   text	   data	    bss	    dec	    hex	filename
-  13708	     68	   1748	  15524	   3ca4	Tp_SpiAds1293.elf
-Finished building: default.size.stdout
- 
-00:36:08 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
-make -j12 all 
-arm-none-eabi-gcc "../Drivers/API/Src/API_Uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/Core/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/API/Src/API_Uart.d" -MT"Drivers/API/Src/API_Uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/API/Src/API_Uart.o"
-arm-none-eabi-gcc -o "Tp_SpiAds1293.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Hans\UBA\Prog uC\PdM_workspace\Tp_SpiAds1293\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_SpiAds1293.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Tp_SpiAds1293.elf
- 
-arm-none-eabi-size   Tp_SpiAds1293.elf 
-arm-none-eabi-objdump -h -S  Tp_SpiAds1293.elf  > "Tp_SpiAds1293.list"
-arm-none-eabi-objcopy  -O binary  Tp_SpiAds1293.elf  "Tp_SpiAds1293.bin"
-   text	   data	    bss	    dec	    hex	filename
-  13712	     68	   1748	  15528	   3ca8	Tp_SpiAds1293.elf
-Finished building: default.size.stdout
- 
-Finished building: Tp_SpiAds1293.bin
- 
-Finished building: Tp_SpiAds1293.list
- 
-00:41:51 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
+09:14:26 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/Core/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc -o "Tp_SpiAds1293.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Hans\UBA\Prog uC\PdM_workspace\Tp_SpiAds1293\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_SpiAds1293.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -47,16 +34,41 @@ Finished building target: Tp_SpiAds1293.elf
  
 arm-none-eabi-size   Tp_SpiAds1293.elf 
 arm-none-eabi-objdump -h -S  Tp_SpiAds1293.elf  > "Tp_SpiAds1293.list"
-arm-none-eabi-objcopy  -O binary  Tp_SpiAds1293.elf  "Tp_SpiAds1293.bin"
    text	   data	    bss	    dec	    hex	filename
-  16224	    168	   1776	  18168	   46f8	Tp_SpiAds1293.elf
+  16480	    168	   1800	  18448	   4810	Tp_SpiAds1293.elf
 Finished building: default.size.stdout
- 
-Finished building: Tp_SpiAds1293.bin
  
 Finished building: Tp_SpiAds1293.list
  
-00:42:51 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
+09:19:14 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/API/Src/API_ADS1293.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/Core/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/API/Src/API_ADS1293.d" -MT"Drivers/API/Src/API_ADS1293.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/API/Src/API_ADS1293.o"
+arm-none-eabi-gcc -o "Tp_SpiAds1293.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Hans\UBA\Prog uC\PdM_workspace\Tp_SpiAds1293\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_SpiAds1293.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tp_SpiAds1293.elf
+ 
+arm-none-eabi-size   Tp_SpiAds1293.elf 
+arm-none-eabi-objdump -h -S  Tp_SpiAds1293.elf  > "Tp_SpiAds1293.list"
+   text	   data	    bss	    dec	    hex	filename
+  16480	    168	   1800	  18448	   4810	Tp_SpiAds1293.elf
+Finished building: default.size.stdout
+ 
+Finished building: Tp_SpiAds1293.list
+ 
+09:19:39 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/API/Src/API_ADS1293.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/Core/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/API/Src/API_ADS1293.d" -MT"Drivers/API/Src/API_ADS1293.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/API/Src/API_ADS1293.o"
+arm-none-eabi-gcc -o "Tp_SpiAds1293.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Hans\UBA\Prog uC\PdM_workspace\Tp_SpiAds1293\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_SpiAds1293.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tp_SpiAds1293.elf
+ 
+arm-none-eabi-size   Tp_SpiAds1293.elf 
+arm-none-eabi-objdump -h -S  Tp_SpiAds1293.elf  > "Tp_SpiAds1293.list"
+   text	   data	    bss	    dec	    hex	filename
+  16480	    168	   1800	  18448	   4810	Tp_SpiAds1293.elf
+Finished building: default.size.stdout
+ 
+Finished building: Tp_SpiAds1293.list
+ 
+09:20:55 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/Core/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc -o "Tp_SpiAds1293.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Hans\UBA\Prog uC\PdM_workspace\Tp_SpiAds1293\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_SpiAds1293.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -64,124 +76,9 @@ Finished building target: Tp_SpiAds1293.elf
  
 arm-none-eabi-size   Tp_SpiAds1293.elf 
 arm-none-eabi-objdump -h -S  Tp_SpiAds1293.elf  > "Tp_SpiAds1293.list"
-arm-none-eabi-objcopy  -O binary  Tp_SpiAds1293.elf  "Tp_SpiAds1293.bin"
    text	   data	    bss	    dec	    hex	filename
-  16204	    168	   1776	  18148	   46e4	Tp_SpiAds1293.elf
+  16480	    168	   1800	  18448	   4810	Tp_SpiAds1293.elf
 Finished building: default.size.stdout
- 
-Finished building: Tp_SpiAds1293.bin
- 
-Finished building: Tp_SpiAds1293.list
- 
-00:44:51 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/Core/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "Tp_SpiAds1293.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Hans\UBA\Prog uC\PdM_workspace\Tp_SpiAds1293\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_SpiAds1293.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Tp_SpiAds1293.elf
- 
-arm-none-eabi-size   Tp_SpiAds1293.elf 
-arm-none-eabi-objdump -h -S  Tp_SpiAds1293.elf  > "Tp_SpiAds1293.list"
-arm-none-eabi-objcopy  -O binary  Tp_SpiAds1293.elf  "Tp_SpiAds1293.bin"
-   text	   data	    bss	    dec	    hex	filename
-  16212	    168	   1776	  18156	   46ec	Tp_SpiAds1293.elf
-Finished building: default.size.stdout
- 
-Finished building: Tp_SpiAds1293.bin
- 
-Finished building: Tp_SpiAds1293.list
- 
-00:49:20 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/Core/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:97:32: warning: passing argument 2 of 'ads1293ReadRegister' makes pointer from integer without a cast [-Wint-conversion]
-   97 |     ads1293ReadRegister(&test, idData, 1);
-      |                                ^~~~~~
-      |                                |
-      |                                uint8_t {aka unsigned char}
-In file included from ../Src/main.c:14:
-C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc/API_ADS1293.h:53:53: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
-   53 | void ads1293ReadRegister(uint8_t *ptxData, uint8_t *prxData, uint16_t size);
-      |                                            ~~~~~~~~~^~~~~~~
-arm-none-eabi-gcc -o "Tp_SpiAds1293.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Hans\UBA\Prog uC\PdM_workspace\Tp_SpiAds1293\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_SpiAds1293.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Tp_SpiAds1293.elf
- 
-arm-none-eabi-size   Tp_SpiAds1293.elf 
-arm-none-eabi-objdump -h -S  Tp_SpiAds1293.elf  > "Tp_SpiAds1293.list"
-arm-none-eabi-objcopy  -O binary  Tp_SpiAds1293.elf  "Tp_SpiAds1293.bin"
-   text	   data	    bss	    dec	    hex	filename
-  16232	    168	   1776	  18176	   4700	Tp_SpiAds1293.elf
-Finished building: default.size.stdout
- 
-Finished building: Tp_SpiAds1293.bin
- 
-Finished building: Tp_SpiAds1293.list
- 
-00:49:47 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/Core/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "Tp_SpiAds1293.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Hans\UBA\Prog uC\PdM_workspace\Tp_SpiAds1293\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_SpiAds1293.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Tp_SpiAds1293.elf
- 
-arm-none-eabi-size   Tp_SpiAds1293.elf 
-arm-none-eabi-objdump -h -S  Tp_SpiAds1293.elf  > "Tp_SpiAds1293.list"
-arm-none-eabi-objcopy  -O binary  Tp_SpiAds1293.elf  "Tp_SpiAds1293.bin"
-   text	   data	    bss	    dec	    hex	filename
-  16228	    168	   1776	  18172	   46fc	Tp_SpiAds1293.elf
-Finished building: default.size.stdout
- 
-Finished building: Tp_SpiAds1293.bin
- 
-Finished building: Tp_SpiAds1293.list
- 
-00:50:37 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/Core/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "Tp_SpiAds1293.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Hans\UBA\Prog uC\PdM_workspace\Tp_SpiAds1293\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_SpiAds1293.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Tp_SpiAds1293.elf
- 
-arm-none-eabi-size   Tp_SpiAds1293.elf 
-arm-none-eabi-objdump -h -S  Tp_SpiAds1293.elf  > "Tp_SpiAds1293.list"
-arm-none-eabi-objcopy  -O binary  Tp_SpiAds1293.elf  "Tp_SpiAds1293.bin"
-   text	   data	    bss	    dec	    hex	filename
-  16212	    168	   1776	  18156	   46ec	Tp_SpiAds1293.elf
-Finished building: default.size.stdout
- 
-Finished building: Tp_SpiAds1293.bin
- 
-Finished building: Tp_SpiAds1293.list
- 
-00:51:35 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/Core/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "Tp_SpiAds1293.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Hans\UBA\Prog uC\PdM_workspace\Tp_SpiAds1293\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_SpiAds1293.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Tp_SpiAds1293.elf
- 
-arm-none-eabi-size   Tp_SpiAds1293.elf 
-arm-none-eabi-objdump -h -S  Tp_SpiAds1293.elf  > "Tp_SpiAds1293.list"
-arm-none-eabi-objcopy  -O binary  Tp_SpiAds1293.elf  "Tp_SpiAds1293.bin"
-   text	   data	    bss	    dec	    hex	filename
-  16228	    168	   1776	  18172	   46fc	Tp_SpiAds1293.elf
-Finished building: default.size.stdout
- 
-Finished building: Tp_SpiAds1293.bin
- 
-Finished building: Tp_SpiAds1293.list
- 
-00:52:16 **** Incremental Build of configuration Debug for project Tp_SpiAds1293 ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/Core/Inc" -I"C:/Hans/UBA/Prog uC/PdM_workspace/Tp_SpiAds1293/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "Tp_SpiAds1293.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Hans\UBA\Prog uC\PdM_workspace\Tp_SpiAds1293\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_SpiAds1293.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Tp_SpiAds1293.elf
- 
-arm-none-eabi-size   Tp_SpiAds1293.elf 
-arm-none-eabi-objdump -h -S  Tp_SpiAds1293.elf  > "Tp_SpiAds1293.list"
-arm-none-eabi-objcopy  -O binary  Tp_SpiAds1293.elf  "Tp_SpiAds1293.bin"
-   text	   data	    bss	    dec	    hex	filename
-  16212	    168	   1776	  18156	   46ec	Tp_SpiAds1293.elf
-Finished building: default.size.stdout
- 
-Finished building: Tp_SpiAds1293.bin
  
 Finished building: Tp_SpiAds1293.list
  

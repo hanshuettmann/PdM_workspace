@@ -4491,3 +4491,174 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-04-21 00:56:55.980
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-04-23 09:50:30.967 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-04-23 09:51:39.545
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-04-23 09:51:39.636
+!MESSAGE Log4j initialized with config file C:\Hans\UBA\Prog uC\PdM_workspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-04-23 09:52:05.437
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-05-13 00:13:05.196 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-05-13 00:13:25.009
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-05-13 00:13:25.070
+!MESSAGE Log4j initialized with config file C:\Hans\UBA\Prog uC\PdM_workspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-05-13 00:13:45.157
+!MESSAGE Started RMI Server, listening on port 41338
+!SESSION 2022-05-19 20:13:36.210 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-05-19 20:14:27.402
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-05-19 20:14:27.522
+!MESSAGE Log4j initialized with config file C:\Hans\UBA\Prog uC\PdM_workspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-05-19 20:14:56.123
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-06-14 18:11:17.726 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-06-14 18:12:09.836
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-06-14 18:12:09.945
+!MESSAGE Log4j initialized with config file C:\Hans\UBA\Prog uC\PdM_workspace\.metadata\.log4j.xml
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2022-06-14 18:12:15.346
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.search.SearchResultView" id and the "Classic Search" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-14 18:12:37.059
+!MESSAGE Indexed 'Ej0_blinky' (99 sources, 208 headers) in 16.1 sec: 29,546 declarations; 93,649 references; 2 unresolved inclusions; 44 syntax errors; 152 unresolved names (0.12%)
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-06-14 18:12:39.745
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-14 18:12:50.043
+!MESSAGE Indexed 'Ej1_pushButton' (99 sources, 208 headers) in 12.9 sec: 29,546 declarations; 93,687 references; 2 unresolved inclusions; 44 syntax errors; 147 unresolved names (0.12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-14 18:13:03.818
+!MESSAGE Indexed 'Ej2_uart' (99 sources, 197 headers) in 13.7 sec: 29,349 declarations; 92,891 references; 10 unresolved inclusions; 41 syntax errors; 399 unresolved names (0.33%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-14 18:13:13.746
+!MESSAGE Indexed 'Ejercicio_delayNB_1' (99 sources, 208 headers) in 9.82 sec: 29,550 declarations; 93,677 references; 2 unresolved inclusions; 43 syntax errors; 147 unresolved names (0.12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-14 18:13:46.634
+!MESSAGE Indexed 'Practica 1' (99 sources, 155 headers) in 32.8 sec: 27,519 declarations; 71,167 references; 13 unresolved inclusions; 41 syntax errors; 19,825 unresolved names (17%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-14 18:13:55.510
+!MESSAGE Indexed 'Practica 2' (99 sources, 209 headers) in 8.82 sec: 29,574 declarations; 93,755 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-14 18:14:03.239
+!MESSAGE Indexed 'Practica 3' (100 sources, 211 headers) in 7.65 sec: 29,343 declarations; 93,573 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-14 18:14:10.508
+!MESSAGE Indexed 'Practica 4' (100 sources, 211 headers) in 7.22 sec: 29,362 declarations; 93,629 references; 2 unresolved inclusions; 41 syntax errors; 148 unresolved names (0.12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-14 18:14:17.784
+!MESSAGE Indexed 'Practica 4.2' (101 sources, 212 headers) in 7.23 sec: 29,625 declarations; 93,823 references; 2 unresolved inclusions; 43 syntax errors; 148 unresolved names (0.12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-14 18:14:25.225
+!MESSAGE Indexed 'Practica 5' (102 sources, 214 headers) in 7.39 sec: 29,703 declarations; 93,833 references; 2 unresolved inclusions; 43 syntax errors; 147 unresolved names (0.12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-14 18:14:32.327
+!MESSAGE Indexed 'Tp_SpiAds1293' (104 sources, 216 headers) in 7.05 sec: 30,152 declarations; 100,261 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.11%)
+!SESSION 2022-06-15 23:20:11.237 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Hans\UBA\Prog uC\PdM_workspace
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-06-15 23:20:15.770
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-06-15 23:20:15.834
+!MESSAGE Log4j initialized with config file C:\Hans\UBA\Prog uC\PdM_workspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-06-15 23:20:38.301
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-06-16 00:20:24.759 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Hans\UBA\Prog uC\PdM_workspace
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-06-16 00:20:29.030
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-06-16 00:20:29.084
+!MESSAGE Log4j initialized with config file C:\Hans\UBA\Prog uC\PdM_workspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-06-16 00:20:40.645
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-06-16 00:41:53.187 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Hans\UBA\Prog uC\PdM_workspace
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-06-16 00:41:57.811
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-06-16 00:41:57.862
+!MESSAGE Log4j initialized with config file C:\Hans\UBA\Prog uC\PdM_workspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-06-16 00:42:09.051
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-06-16 01:37:04.264 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Hans\UBA\Prog uC\PdM_workspace
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-06-16 01:37:08.690
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-06-16 01:37:08.745
+!MESSAGE Log4j initialized with config file C:\Hans\UBA\Prog uC\PdM_workspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-06-16 01:37:20.178
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-06-16 08:48:42.214 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-06-16 08:48:53.204
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-06-16 08:48:53.310
+!MESSAGE Log4j initialized with config file C:\Hans\UBA\Prog uC\PdM_workspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-06-16 08:49:07.180
+!MESSAGE Started RMI Server, listening on port 41337

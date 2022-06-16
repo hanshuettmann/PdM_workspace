@@ -76,6 +76,28 @@ int main(void) {
 	/* ID buffer string */
 	static char idMessage[50];
 
+	BSP_LED_Init(LED1);
+
+	ads1293Set3LeadECG();
+
+	uint8_t ecgData[] = { 0, 0, 0, 0, 0, 0, 0 };
+
+	while (1) {
+		if (!HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_15)) {
+			HAL_GPIO_WritePin(LED1_GPIO_PORT, LED1_PIN, GPIO_PIN_SET);
+			ads1293ReadDataLoop(ecgData, 6);
+			sprintf(idMessage, "ADS1293 ID: %d\r\n", ecgData[0]);
+			sprintf(idMessage, "ADS1293 ID: %d\r\n", ecgData[1]);
+			sprintf(idMessage, "ADS1293 ID: %d\r\n", ecgData[2]);
+			sprintf(idMessage, "ADS1293 ID: %d\r\n", ecgData[3]);
+			sprintf(idMessage, "ADS1293 ID: %d\r\n", ecgData[4]);
+			sprintf(idMessage, "ADS1293 ID: %d\r\n", ecgData[5]);
+			sprintf(idMessage, "ADS1293 ID: %d\r\n", ecgData[6]);
+			uartSendString((uint8_t*) idMessage);
+		} else {
+			HAL_GPIO_WritePin(LED1_GPIO_PORT, LED1_PIN, GPIO_PIN_RESET);
+		}
+	}
 	/* Infinite loop */
 	while (1) {
 		/* Handle button states */

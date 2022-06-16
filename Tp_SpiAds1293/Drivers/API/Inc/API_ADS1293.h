@@ -50,10 +50,15 @@ typedef bool bool_t;
 #define   CH_CNFG       0x2f
 #define   REVID         0x40
 
+#define   DATA_LOOP		0x50
+
 /* Public function prototypes ------------------------------------------------*/
 bool_t ads1293Init(uint8_t dummy);
 void ads1293ReadRegister(uint8_t *ptxData, uint8_t *prxData, uint16_t size);
 void ads1293ReadID(uint8_t *pidData);
+void ads1293WriteRegister(uint8_t wrAddress, uint8_t data, uint16_t size);
+void ads1293Set3LeadECG(void);
+void ads1293ReadDataLoop(uint8_t *rawData, uint32_t loopSize);
 
 #endif /* API_INC_API_ADS1293_H_ */
 /*****************************END OF FILE**************************************/
